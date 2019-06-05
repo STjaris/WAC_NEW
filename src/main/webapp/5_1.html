@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Insert title here</title>
+
+	<link rel="stylesheet" href="5_1.css">
+</head>
+
+<body onload="initpage();">
+
+
+
+
+
+	<div id="frame">
+
+		<div>
+			<button type='button' id='logInBtn'>Log in</button>
+		</div>
+
+
+
+		<div id="myLocation">
+			<div class="Header">
+				<h3>
+					Mijn Locatie
+					</h1>
+			</div>
+
+			<label id="code">Code</label><br> <label id="land">Land</label><br>
+			<label id="regio">Regio</label><br> <label id="stad" onclick="lokaalWeer()">Stad</label><br> <label
+				id="postcode">Postcode</label><br>
+			<label id="latitude">Lantitude</label><br> <label id="longitude">Longitude</label><br>
+			<label id="ip">Ip</label>
+		</div>
+
+		<div id="weatherInfo">
+			<div class="Header">
+				<h3>
+					Het weer in <span id="city"></span>
+				</h3>
+			</div>
+
+			<label>Temperatuur <span id="temp"></span></label><br> <label>Lucht
+				<span id="lucht"></span>
+			</label><br> <label>Windsnelheid <span id="windsnelheid"></span></label><br>
+			<label>Windrichting <span id="windrichting"></span></label><br>
+		</div>
+
+
+
+		<form id='edit' class='editInfo'>
+			<h3>Invoervelden</h3>
+			<input type='text' , name='invoerCode' , id='invoerCode' , value='code' />
+			<input type='text' , name='invoerland' , id='invoerland' , value='land' />
+			<input type='text' , name='invoerCap' , id='invoerCap' , value='cap' />
+			<input type='text' , name='invoerRegio' , id='invoerRegio' , value='regio' />
+			<input type='text' , name='invoerlandOpp' , id='invoerlandOpp' , value='opp' />
+			<input type='text' , name='invoerlandPop' , id='invoerlandPop' , value='pop' />
+
+			<button type='button' , id='opslaanBtn'>OPSLAAN</button>
+			<button type='button' , id='editBtn'>EDIT</button>
+
+		</form>
+
+
+		<div id="countryList" style="overflow-x: auto;">
+			<div class="Header">
+				<h3>Beschikbare vakantiebestemmingen</h3>
+			</div>
+			<table id='tableMain'>
+				<tr id="table">
+					<th>Land</th>
+					<th>Hoofdstad</th>
+					<th>Regio</th>
+					<th>Oppervlakte</th>
+					<th>Inwoners</th>
+				</tr>
+			</table>
+
+		</div>
+
+
+
+
+
+	</div>
+
+	<div class="form-popup" id="myForm">
+		<form id='form-login' class="form-container">
+			<h1>Login</h1>
+
+			<label for="username"><b>Username</b></label>
+			<input type="text" placeholder="Enter Username" name="Username" id='id' required>
+
+			<label for="psw"><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" name="psw" id='psw' required>
+
+
+		</form>
+
+		<button type="button" class="btn" id='btnLogIn'>Login</button>
+		<button type="button" class="btn cancel" id=logInCancelBtn>Close</button>
+	</div>
+
+	<!-- Hier komen jouw script-tags -->
+	<script src="5_1.js"></script>
+
+</body>
+
+</html>

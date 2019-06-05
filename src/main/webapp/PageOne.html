@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+
+<script>
+    
+
+    function func(event){
+         if(event.type = "keyup"){
+             console.log("text");
+            window.localStorage.setItem("invoer", event.target.value);
+            console.log(event.target.value);
+        }
+    }
+
+    document.querySelector("#textID").addEventListener("keyup", func);
+
+
+
+
+</script>
+</head>
+<body>
+
+    <textarea name="Invoer" id="textID"></textarea>
+
+    
+
+</body>
+</html>
