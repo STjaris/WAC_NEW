@@ -318,7 +318,7 @@ function tijdVerschil(tijd, tijd2) {
 
 function loadCountries() {
 
-    fetch("http://localhost:4711/firstapp/restservices/countries")
+    fetch("restservices/countries")
         .then(function (response) {
             return response.json();
         })
